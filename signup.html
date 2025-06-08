@@ -4,29 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inscription - TaskManager</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">TaskManager</div>
+    <div class="logo">
+      <i class="fas fa-tasks"></i>
+      <span>TaskManager</span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="features.html">Fonctionnalités</a></li>
         <li><a href="pricing.html">Tarifs</a></li>
-        <li><a href="signup.html">Inscription</a></li>
+        <li><a href="signup.html" class="nav-cta">Inscription</a></li>
       </ul>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
   </header>
 
-  <section class="signup">
-    <h2>Créer un compte</h2>
-    <form id="form">
-      <input type="text" placeholder="Nom complet" required />
-      <input type="email" placeholder="Adresse email" required />
-      <input type="password" placeholder="Mot de passe" required />
-      <button type="submit">S'inscrire</button>
-    </form>
+  <section class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h2>Créer un compte</h2>
+        <p>Commencez à organiser votre vie en quelques secondes</p>
+      </div>
+      
+      <div class="auth-social">
+        <button class="btn-social google">
+          <i class="fab fa-google"></i> S'inscrire avec Google
+        </button>
+        <button class="btn-social facebook">
+          <i class="fab fa-facebook-f"></i> S'inscrire avec Facebook
+        </button>
+      </div>
+      
+      <div class="auth-divider">
+        <span>ou</span>
+      </div>
+      
+      <form id="signup-form" class="auth-form">
+        <div class="form-group">
+          <label for="fullname">Nom complet</label>
+          <div class="input-with-icon">
+            <i class="fas fa-user"></i>
+            <input type="text" id="fullname" placeholder="Jean Dupont" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Adresse email</label>
+          <div class="input-with-icon">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="votre@email.com" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="••••••••" required>
+            <button type="button" class="toggle-password">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="password-strength">
+            <div class="strength-bar"></div>
+            <span class="strength-text">Force du mot de passe</span>
+          </div>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">J'accepte les <a href="terms.html">conditions d'utilisation</a> et la <a href="privacy.html">politique de confidentialité</a></label>
+        </div>
+        
+        <button type="submit" class="btn-auth">
+          <span>S'inscrire</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+      
+      <div class="auth-footer">
+        <p>Vous avez déjà un compte ? <a href="login.html">Connectez-vous</a></p>
+      </div>
+    </div>
+    
+    <div class="auth-illustration">
+      <img src="https://via.placeholder.com/500x500" alt="TaskManager illustration">
+      <div class="auth-benefits">
+        <h3>Rejoignez notre communauté</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Accès à toutes les fonctionnalités</li>
+          <li><i class="fas fa-check-circle"></i> Synchronisation multi-appareils</li>
+          <li><i class="fas fa-check-circle"></i> Support prioritaire</li>
+          <li><i class="fas fa-check-circle"></i> 7 jours d'essai gratuit</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -75,8 +154,7 @@
       <p>&copy; 2025 TaskManager. Tous droits réservés.</p>
     </div>
   </footer>
+  
   <script src="script.js"></script>
-</body>
-</html>
 </body>
 </html>
