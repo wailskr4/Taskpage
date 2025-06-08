@@ -8,150 +8,176 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="main-header">
     <div class="logo">
       <i class="fas fa-tasks"></i>
       <span>TaskManager</span>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="features.html">Fonctionnalités</a></li>
-        <li><a href="pricing.html">Tarifs</a></li>
-        <li><a href="signup.html" class="nav-cta">Inscription</a></li>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html">Accueil</a></li>
+        <li class="nav-item"><a href="features.html">Fonctionnalités</a></li>
+        <li class="nav-item"><a href="pricing.html">Tarifs</a></li>
+        <li class="nav-item"><a href="signup.html" class="nav-cta">Inscription</a></li>
       </ul>
-      <div class="mobile-menu-btn">
+      <button class="mobile-menu-btn" aria-label="Menu mobile">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
     </nav>
   </header>
 
-  <section class="auth-container">
-    <div class="auth-card">
-      <div class="auth-header">
-        <h2>Créer un compte</h2>
-        <p>Commencez à organiser votre vie en quelques secondes</p>
-      </div>
-      
-      <div class="auth-social">
-        <button class="btn-social google">
-          <i class="fab fa-google"></i> S'inscrire avec Google
-        </button>
-        <button class="btn-social facebook">
-          <i class="fab fa-facebook-f"></i> S'inscrire avec Facebook
-        </button>
-      </div>
-      
-      <div class="auth-divider">
-        <span>ou</span>
-      </div>
-      
-      <form id="signup-form" class="auth-form">
-        <div class="form-group">
-          <label for="fullname">Nom complet</label>
-          <div class="input-with-icon">
-            <i class="fas fa-user"></i>
-            <input type="text" id="fullname" placeholder="Jean Dupont" required>
-          </div>
+  <main class="signup-page">
+    <div class="signup-container">
+      <div class="signup-card">
+        <header class="signup-header">
+          <h1 class="signup-title">Créez votre compte</h1>
+          <p class="signup-subtitle">Commencez à organiser votre vie en quelques secondes</p>
+        </header>
+        
+        <div class="social-auth">
+          <button class="social-btn google-btn">
+            <i class="fab fa-google"></i> Continuer avec Google
+          </button>
+          <button class="social-btn facebook-btn">
+            <i class="fab fa-facebook-f"></i> Continuer avec Facebook
+          </button>
         </div>
         
-        <div class="form-group">
-          <label for="email">Adresse email</label>
-          <div class="input-with-icon">
-            <i class="fas fa-envelope"></i>
-            <input type="email" id="email" placeholder="votre@email.com" required>
-          </div>
+        <div class="auth-divider">
+          <span class="divider-text">ou</span>
         </div>
         
-        <div class="form-group">
-          <label for="password">Mot de passe</label>
-          <div class="input-with-icon">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="password" placeholder="••••••••" required>
-            <button type="button" class="toggle-password">
-              <i class="fas fa-eye"></i>
-            </button>
+        <form id="signup-form" class="auth-form">
+          <div class="form-group">
+            <label for="fullname" class="form-label">Nom complet</label>
+            <div class="input-container">
+              <i class="input-icon fas fa-user"></i>
+              <input type="text" id="fullname" class="form-input" placeholder="Jean Dupont" required>
+            </div>
           </div>
-          <div class="password-strength">
-            <div class="strength-bar"></div>
-            <span class="strength-text">Force du mot de passe</span>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">Adresse email</label>
+            <div class="input-container">
+              <i class="input-icon fas fa-envelope"></i>
+              <input type="email" id="email" class="form-input" placeholder="votre@email.com" required>
+            </div>
           </div>
-        </div>
+          
+          <div class="form-group">
+            <label for="password" class="form-label">Mot de passe</label>
+            <div class="input-container">
+              <i class="input-icon fas fa-lock"></i>
+              <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+              <button type="button" class="password-toggle" aria-label="Afficher le mot de passe">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <div class="password-strength">
+              <div class="strength-meter">
+                <div class="strength-level"></div>
+              </div>
+              <span class="strength-text">Force du mot de passe</span>
+            </div>
+          </div>
+          
+          <div class="form-group terms-group">
+            <input type="checkbox" id="terms" class="terms-checkbox" required>
+            <label for="terms" class="terms-label">
+              J'accepte les <a href="terms.html" class="terms-link">conditions d'utilisation</a> et la <a href="privacy.html" class="terms-link">politique de confidentialité</a>
+            </label>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">S'inscrire</span>
+            <i class="btn-icon fas fa-arrow-right"></i>
+          </button>
+        </form>
         
-        <div class="form-group checkbox-group">
-          <input type="checkbox" id="terms" required>
-          <label for="terms">J'accepte les <a href="terms.html">conditions d'utilisation</a> et la <a href="privacy.html">politique de confidentialité</a></label>
-        </div>
-        
-        <button type="submit" class="btn-auth">
-          <span>S'inscrire</span>
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </form>
-      
-      <div class="auth-footer">
-        <p>Vous avez déjà un compte ? <a href="login.html">Connectez-vous</a></p>
+        <footer class="auth-footer">
+          <p class="footer-text">Vous avez déjà un compte ? <a href="login.html" class="footer-link">Connectez-vous</a></p>
+        </footer>
       </div>
+      
+      <aside class="signup-promo">
+        <div class="promo-image-container">
+          <img src="assets/images/signup-illustration.svg" alt="TaskManager illustration" class="promo-image">
+        </div>
+        <div class="promo-content">
+          <h2 class="promo-title">Rejoignez notre communauté</h2>
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <i class="benefit-icon fas fa-check-circle"></i>
+              <span>Accès à toutes les fonctionnalités</span>
+            </li>
+            <li class="benefit-item">
+              <i class="benefit-icon fas fa-check-circle"></i>
+              <span>Synchronisation multi-appareils</span>
+            </li>
+            <li class="benefit-item">
+              <i class="benefit-icon fas fa-check-circle"></i>
+              <span>Support prioritaire</span>
+            </li>
+            <li class="benefit-item">
+              <i class="benefit-icon fas fa-check-circle"></i>
+              <span>7 jours d'essai gratuit</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
     </div>
-    
-    <div class="auth-illustration">
-      <img src="https://via.placeholder.com/500x500" alt="TaskManager illustration">
-      <div class="auth-benefits">
-        <h3>Rejoignez notre communauté</h3>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Accès à toutes les fonctionnalités</li>
-          <li><i class="fas fa-check-circle"></i> Synchronisation multi-appareils</li>
-          <li><i class="fas fa-check-circle"></i> Support prioritaire</li>
-          <li><i class="fas fa-check-circle"></i> 7 jours d'essai gratuit</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  </main>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <div class="logo">
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section about-section">
+        <div class="footer-logo">
           <i class="fas fa-tasks"></i>
           <span>TaskManager</span>
         </div>
-        <p>L'outil ultime pour organiser votre travail et votre vie personnelle.</p>
+        <p class="footer-description">L'outil ultime pour organiser votre travail et votre vie personnelle.</p>
         <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-      <div class="footer-section">
-        <h3>Liens utiles</h3>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="features.html">Fonctionnalités</a></li>
-          <li><a href="pricing.html">Tarifs</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+      
+      <div class="footer-section links-section">
+        <h3 class="section-title">Liens utiles</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Accueil</a></li>
+          <li><a href="features.html" class="footer-link">Fonctionnalités</a></li>
+          <li><a href="pricing.html" class="footer-link">Tarifs</a></li>
+          <li><a href="blog.html" class="footer-link">Blog</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-section">
-        <h3>Légal</h3>
-        <ul>
-          <li><a href="privacy.html">Confidentialité</a></li>
-          <li><a href="terms.html">Conditions d'utilisation</a></li>
-          <li><a href="cookies.html">Cookies</a></li>
+      
+      <div class="footer-section legal-section">
+        <h3 class="section-title">Légal</h3>
+        <ul class="footer-links">
+          <li><a href="privacy.html" class="footer-link">Confidentialité</a></li>
+          <li><a href="terms.html" class="footer-link">Conditions d'utilisation</a></li>
+          <li><a href="cookies.html" class="footer-link">Cookies</a></li>
         </ul>
       </div>
-      <div class="footer-section">
-        <h3>Newsletter</h3>
-        <p>Abonnez-vous pour recevoir des conseils de productivité.</p>
+      
+      <div class="footer-section newsletter-section">
+        <h3 class="section-title">Newsletter</h3>
+        <p class="newsletter-text">Abonnez-vous pour recevoir des conseils de productivité.</p>
         <form class="newsletter-form">
-          <input type="email" placeholder="Votre email">
-          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          <input type="email" class="newsletter-input" placeholder="Votre email">
+          <button type="submit" class="newsletter-btn" aria-label="S'abonner">
+            <i class="fas fa-paper-plane"></i>
+          </button>
         </form>
       </div>
     </div>
+    
     <div class="footer-bottom">
-      <p>&copy; 2025 TaskManager. Tous droits réservés.</p>
+      <p class="copyright">&copy; 2025 TaskManager. Tous droits réservés.</p>
     </div>
   </footer>
   
