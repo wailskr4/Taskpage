@@ -4,67 +4,231 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Accueil - TaskManager</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">TaskManager</div>
+    <div class="logo">
+      <i class="fas fa-tasks"></i>
+      <span>TaskManager</span>
+    </div>
     <nav>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="features.html">Fonctionnalités</a></li>
         <li><a href="pricing.html">Tarifs</a></li>
-        <li><a href="signup.html">Inscription</a></li>
+        <li><a href="signup.html" class="nav-cta">Inscription</a></li>
       </ul>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-content">
       <h1>Gérez vos tâches efficacement</h1>
-      <p>Une application simple, rapide et puissante pour organiser vos journées.</p>
-      <a href="signup.html"><button>Commencer maintenant</button></a>
+      <p>Une application simple, rapide et puissante pour organiser vos journées et booster votre productivité.</p>
+      <div class="hero-buttons">
+        <a href="signup.html" class="btn-primary">Commencer maintenant</a>
+        <a href="#features" class="btn-secondary">En savoir plus <i class="fas fa-arrow-down"></i></a>
+      </div>
+      <div class="hero-image">
+        <img src="https://via.placeholder.com/600x400" alt="TaskManager interface preview" class="screenshot">
+      </div>
     </div>
   </section>
 
-  <!-- Section À propos -->
-  <section class="features">
-    <h2>Pourquoi TaskManager ?</h2>
+  <section class="features" id="features">
+    <div class="section-header">
+      <span class="section-subtitle">Pourquoi nous choisir</span>
+      <h2>Pourquoi TaskManager ?</h2>
+    </div>
     <div class="features-grid">
-      <div class="feature"><h3>💡 Simplicité</h3><p>Interface claire pour tous les profils.</p></div>
-      <div class="feature"><h3>🚀 Rapidité</h3><p>Ajoutez vos tâches en quelques secondes.</p></div>
-      <div class="feature"><h3>🔐 Sécurité</h3><p>Vos données sont chiffrées et protégées.</p></div>
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Simplicité</h3>
+        <p>Interface intuitive conçue pour tous les profils, même les moins technophiles.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Rapidité</h3>
+        <p>Ajoutez, organisez et complétez vos tâches en quelques secondes.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h3>Sécurité</h3>
+        <p>Vos données sont chiffrées de bout en bout et protégées.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <h3>Synchronisation</h3>
+        <p>Accédez à vos tâches depuis n'importe quel appareil, en temps réel.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Section Témoignages -->
-  <section class="features">
-    <h2>Ce que disent nos utilisateurs</h2>
-    <div class="features-grid">
-      <div class="feature"><p>"Grâce à TaskManager, mes journées sont 2x plus productives !" <br><strong>- Lujain Rahaf</strong></p></div>
-      <div class="feature"><p>"L’interface est fluide, c’est un vrai plaisir à utiliser." <br><strong>- Nesrine Sakhri</strong></p></div>
-      <div class="feature"><p>"Je ne rate plus aucun rendez-vous, je recommande !" <br><strong>- Ellyne Lilya</strong></p></div>
+  <section class="testimonials">
+    <div class="section-header">
+      <span class="section-subtitle">Nos utilisateurs témoignent</span>
+      <h2>Ce que disent nos utilisateurs</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="quote">"Grâce à TaskManager, mes journées sont 2x plus productives ! L'interface est parfaite."</p>
+        <div class="user">
+          <div class="avatar">LR</div>
+          <div class="user-info">
+            <strong>Lujain Rahaf</strong>
+            <span>Chef de projet</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="quote">"L'application est fluide et fiable, c'est un vrai plaisir à utiliser au quotidien."</p>
+        <div class="user">
+          <div class="avatar">NS</div>
+          <div class="user-info">
+            <strong>Nesrine Sakhri</strong>
+            <span>Freelance</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="quote">"Je ne rate plus aucun rendez-vous depuis que j'utilise TaskManager. Je recommande !"</p>
+        <div class="user">
+          <div class="avatar">EL</div>
+          <div class="user-info">
+            <strong>Ellyne Lilya</strong>
+            <span>Étudiante</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Section FAQ -->
-  <section class="features">
-    <h2>Questions fréquentes</h2>
-    <div class="faq">
-      <div class="question" onclick="toggleAnswer(this)">🧐 Est-ce gratuit ?<p class="answer">Oui, une version gratuite est disponible avec toutes les fonctions de base.</p></div>
-      <div class="question" onclick="toggleAnswer(this)">📱 Existe-t-il une appli mobile ?<p class="answer">Une version Android/iOS est en développement.</p></div>
-      <div class="question" onclick="toggleAnswer(this)">👥 Peut-on partager des tâches ?<p class="answer">Oui, dans la version Pro ou Entreprise.</p></div>
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-subtitle">Besoin d'aide ?</span>
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Est-ce gratuit ?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Oui, TaskManager propose une version gratuite avec toutes les fonctions essentielles pour gérer vos tâches quotidiennes. Nous offrons également des plans premium avec des fonctionnalités avancées.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Existe-t-il une appli mobile ?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Notre application mobile est disponible sur iOS et Android. Vous pouvez la télécharger depuis l'App Store ou Google Play Store. Elle se synchronise automatiquement avec la version web.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Peut-on partager des tâches ?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolument ! Les versions Pro et Entreprise permettent de partager des tâches, des projets et des listes avec vos collègues, amis ou famille. Vous pouvez également attribuer des tâches et suivre leur progression.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Call-to-action final -->
   <section class="cta">
-    <h2>Prêt à améliorer votre productivité ?</h2>
-    <a href="signup.html"><button>Créer un compte gratuit</button></a>
+    <div class="cta-content">
+      <h2>Prêt à améliorer votre productivité ?</h2>
+      <p>Rejoignez plus de 100,000 utilisateurs satisfaits dès aujourd'hui.</p>
+      <div class="cta-buttons">
+        <a href="signup.html" class="btn-primary">Créer un compte gratuit</a>
+        <a href="pricing.html" class="btn-secondary">Voir les tarifs</a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 TaskManager. Tous droits réservés.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="logo">
+          <i class="fas fa-tasks"></i>
+          <span>TaskManager</span>
+        </div>
+        <p>L'outil ultime pour organiser votre travail et votre vie personnelle.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Liens utiles</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="features.html">Fonctionnalités</a></li>
+          <li><a href="pricing.html">Tarifs</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Légal</h3>
+        <ul>
+          <li><a href="privacy.html">Confidentialité</a></li>
+          <li><a href="terms.html">Conditions d'utilisation</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Abonnez-vous pour recevoir des conseils de productivité.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Votre email">
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TaskManager. Tous droits réservés.</p>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>
